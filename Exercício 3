@@ -1,0 +1,21 @@
+// Elabore um algoritmo que efetue a conversão de valores monetários de Real (R$) para dólar (US$). O algoritmo deverá solicitar o valor da cotação do dólar e a quantidade de reais a ser convertida. Em seguida apresente o valor em dólares desta conversão.
+
+
+#include <stdio.h>
+
+int main(void) {
+
+  float R, D, cot;
+
+  //printf("Digite o valor em real(R$): \n");
+  printf("Informe a cotação atual do Dolar (USD):\n");
+  scanf("%f", &cot);
+
+  printf("Informe a quantidade de reais a serem convertidos (R$):\n");
+  scanf("%f", &R);
+
+  D = cot * R;
+
+  printf("A quantidade convertida em Dolar é: UDS %.2f\n", D);
+  return 0;
+}
