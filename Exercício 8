@@ -1,0 +1,52 @@
+// Escreva um programa em C de ajuda para vendedores. A partir de um valor total lido, calcule e mostre:a. O total a pagar com desconto de 10%;b. O valor de cada parcela, considerando o parcelamento de 3 (três) vezes sem juros;c. A comissão do vendedor, no caso de a venda ser a vista (5% sobre o valor com desconto);d. A comissão do vendedor, no caso de a venda ser parcelada (5% sobre o valor total).
+
+#include <stdio.h>
+
+int main(void) {
+// A
+  double valortotal;
+  double vlcomdescontovlcomdesconto;
+  double taxa= 10;
+  
+//B
+  int totalparcela;
+  float vlcompra, vlparcela;
+
+  //C
+
+float comissao;
+float taxa1 = 0.05;
+  
+// D
+
+  // A - COM DESCONTO DE 10 %
+  printf("Informe o valor total (R$):\n");
+  scanf("%lf", &valortotal);
+
+double vlcomdesconto = valortotal - taxa/100;
+  
+printf("O valor com desconto é: R$ %g\n",vlcomdesconto);
+
+  //B - PARCELANDO 3X
+   printf("Informe a quantidade de parcelas:\n");
+   scanf("%i", &totalparcela);
+
+  vlparcela = valortotal / totalparcela;
+
+  printf("O valor da parcela é: R$ %.2f\n",vlparcela);
+
+  // C 5% DO VALOR COM DESCONTO
+
+  comissao = vlcomdesconto * taxa1;
+
+  printf("O valor da comissão é: R$ %.2f\n",comissao); // 
+  
+
+  // D - 5 % DO VALOR TOTAL
+
+  comissao = valortotal * taxa1;
+
+  printf("O valor da comissão é: R$ %.2f\n",comissao); 
+
+  return 0;
+}
