@@ -1,0 +1,25 @@
+//Uma empresa deseja calcular o salário líquido de um prestador de serviços. Sabe-se que o prestador de serviços trabalha 6 horas por dia. Escreva um algoritmo que ajude a empresa neste cálculo. Seu programa deverá solicitar ao usuário a quantidade de dias trabalhados e o valor da hora de trabalho.//
+//Calcule o salário líquido com as informações anteriores, descontando o valor de 8% para o imposto de renda. Apresente o valor dosalário líquido e o valor do imposto de renda.
+
+#include <stdio.h>
+
+int main(void) {
+
+ int qthorasdodia = 6;
+ int qtdias;
+  double vl;
+  double taxa = 0.08;
+
+  printf("Informe a quantidade de dias trabalhados: \n");
+  scanf("%d", &qtdias);
+
+  printf("Informe o valor da hora de trabalho(R$): \n");
+  scanf("%lf", &vl);
+
+  int valorsemtaxa = qthorasdodia * qtdias * vl;
+
+  printf("Salario liquido: R$ %g\n", valorsemtaxa * (1 - taxa));
+  printf("Valor do imposto: R$ %g\n", valorsemtaxa * taxa);
+  
+  return 0;
+}
