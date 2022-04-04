@@ -1,19 +1,17 @@
-//Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a área do retângulo.
+//Escreva um algoritmo para ler um valor (do teclado) e escrever (na tela) o seu antecessor
 
 #include <stdio.h>
 
 int main(void) {
 
-  int base, altura, area ;
+  int num, ant;
   
-  printf("Digite o valor da base: ");
-  scanf("%d", &base);
-
-  printf("Digite o valor da altura: ");
-  scanf("%d", &altura);
-
-  area = base + altura;
-  printf("Área do retangulo: %d", area);
+  printf("Digite o número: \n");
+  scanf("%d", &num);
   
+  ant = num -1;
+  printf("O número antecessor é: %d\n", ant);
   return 0;
 }
+
+// REFAZER
