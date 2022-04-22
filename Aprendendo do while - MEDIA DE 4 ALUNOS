@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  int contador = 1;
+  float  nota, media, total = 0;
+  while (contador <= 4)
+    {
+printf("Digite a nota:\n");
+  scanf("%f", &nota);
+
+      total = total + nota;
+      contador++;
+    }
+
+  media = total / 4;
+
+  printf("A media e: %.2f\n", media);
+  
+  return 0;
+}
